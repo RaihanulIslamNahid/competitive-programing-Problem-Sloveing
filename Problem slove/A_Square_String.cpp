@@ -49,17 +49,23 @@ using namespace std;
 /* Main */
 int32_t main()
 {
-    fast int n;
-    cin >> n;
-    if (n % 2 == 0)
+    fast int t = 1;
+    cin >> t;
+    while (t--)
     {
-        cout << "4"
-             << " " << n - 4;
-    }
-    else
-    {
-        cout << "9"
-             << " " << n - 9;
+        string s;
+        cin >> s;
+        int n = s.size();
+        if (n % 2 == 0)
+        {
+            if (s.substr(0, n / 2) == s.substr(n / 2, n / 2))
+                cout << "YES" << endl;
+
+            else
+                cout << "NO" << endl;
+        }
+        else
+            cout << "NO" << endl;
     }
     return 0;
 }

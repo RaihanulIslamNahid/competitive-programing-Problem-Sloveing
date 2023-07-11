@@ -49,17 +49,32 @@ using namespace std;
 /* Main */
 int32_t main()
 {
-    fast int n;
-    cin >> n;
-    if (n % 2 == 0)
+    fast
+
+        int n,
+        m;
+    cin >> n >> m;
+    int i = 1;
+    int count = 0;
+    for (;;)
     {
-        cout << "4"
-             << " " << n - 4;
+        if (n - i == 0)
+        {
+            break;
+        }
+        if (m - i == 0)
+        {
+            break;
+        }
+        i++;
+        count++;
+    }
+    if (count % 2 == 0)
+    {
+        cout << "Akshat" << endl;
     }
     else
     {
-        cout << "9"
-             << " " << n - 9;
+        cout << "Malvika" << endl;
     }
-    return 0;
 }

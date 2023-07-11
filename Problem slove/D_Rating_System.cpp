@@ -49,17 +49,11 @@ using namespace std;
 /* Main */
 int32_t main()
 {
-    fast int n;
-    cin >> n;
-    if (n % 2 == 0)
+    fast int t = 1;
+    cin >> t;
+    while (t--)
     {
-        cout << "4"
-             << " " << n - 4;
-    }
-    else
-    {
-        cout << "9"
-             << " " << n - 9;
+        int a, c, d;
     }
     return 0;
 }

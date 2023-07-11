@@ -49,17 +49,32 @@ using namespace std;
 /* Main */
 int32_t main()
 {
-    fast int n;
-    cin >> n;
-    if (n % 2 == 0)
+    fast int n, k;
+    cin >> n >> k;
+    int arr[n];
+    for (int i = 0; i < n; i++)
     {
-        cout << "4"
-             << " " << n - 4;
+        cin >> arr[i];
+    }
+    int count = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] < 5)
+        {
+            if (5 - arr[i] >= k)
+            {
+                count++;
+            }
+        }
+    }
+    if (count >= 3)
+    {
+        cout << count / 3 << endl;
     }
     else
     {
-        cout << "9"
-             << " " << n - 9;
+        cout << 0 << endl;
     }
+
     return 0;
 }

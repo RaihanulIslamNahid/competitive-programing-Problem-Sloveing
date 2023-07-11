@@ -6,19 +6,21 @@ using namespace std;
 #define int long long
 #define float double
 #define pb push_back
-#define mp make_pair
+#define mp make_pair 
 #define ss second
 #define all(c) c.begin(), c.end()
-#define f0(i, n) for (int i = 0; i < n; ++i)
-#define f1(i, n) for (int i = 1; i < n; ++i)
-#define f2(i, n) for (int i = 1; i <= n; ++i)
-#define f3(i, n) for (int i = n - 1; i >= 0; i--)
+#define f0(i,n) for(int i=0;i<n;++i)
+#define f1(i,n) for(int i=1;i<n;++i)
+#define f2(i,n) for(int i=1;i<=n;++i)
+#define f3(i, n) for(int i=n-1;i>=0;i--)
 #define fast ios_base::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+
 
 /*-----LCM------*/
 /*int lcm(int a,int b){
     return a*b/__gcd(a,b);
 }*/
+
 
 /* Prime Number */
 /*bool isPrime(int n){
@@ -29,6 +31,7 @@ using namespace std;
     }
     return true;
 }*/
+
 
 /*==Sieve of Eratosthenes==*/
 /*int prime(long long n){
@@ -46,20 +49,20 @@ using namespace std;
     return 1;
 }*/
 
+
 /* Main */
-int32_t main()
-{
-    fast int n;
-    cin >> n;
-    if (n % 2 == 0)
-    {
-        cout << "4"
-             << " " << n - 4;
-    }
-    else
-    {
-        cout << "9"
-             << " " << n - 9;
-    }
-    return 0;
+int32_t main(){
+fast
+int t=1;
+cin>>t;
+while(t--){
+    string s;
+    cin >> s;
+    int m;
+    cin >> m;
+    string r, l;
+    cin >> r >> l;
+    
+}
+return 0;
 }

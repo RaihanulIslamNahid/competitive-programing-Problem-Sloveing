@@ -49,17 +49,23 @@ using namespace std;
 /* Main */
 int32_t main()
 {
-    fast int n;
+    fast
+
+        int n;
     cin >> n;
-    if (n % 2 == 0)
+    int arr[n];
+    for (int i = 0; i < n; i++)
     {
-        cout << "4"
-             << " " << n - 4;
+        cin >> arr[i];
     }
-    else
+    sort(arr, arr + n);
+
+    int count = 0;
+    for (int i = 0; i < n - 1; i++)
     {
-        cout << "9"
-             << " " << n - 9;
+        count = count + arr[n - 1] - arr[i];
     }
+    cout << count << endl;
+
     return 0;
 }

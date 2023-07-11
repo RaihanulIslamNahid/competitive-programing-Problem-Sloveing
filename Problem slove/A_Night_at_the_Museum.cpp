@@ -49,17 +49,25 @@ using namespace std;
 /* Main */
 int32_t main()
 {
-    fast int n;
-    cin >> n;
-    if (n % 2 == 0)
+    fast
+        string s;
+    cin >> s;
+    int Smove = 0;
+    int start = 0;
+    for (int i = 0; i < s.size(); i++)
     {
-        cout << "4"
-             << " " << n - 4;
+        int index = s[i] - 97;
+        int w = abs(start - index);
+        if (w < 13)
+        {
+            Smove += w;
+        }
+        else
+        {
+            Smove += 26 - w;
+        }
+        start = index;
     }
-    else
-    {
-        cout << "9"
-             << " " << n - 9;
-    }
+    cout << Smove;
     return 0;
 }

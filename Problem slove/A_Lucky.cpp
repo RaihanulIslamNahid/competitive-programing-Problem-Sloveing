@@ -49,17 +49,23 @@ using namespace std;
 /* Main */
 int32_t main()
 {
-    fast int n;
-    cin >> n;
-    if (n % 2 == 0)
+    fast int t = 1;
+    cin >> t;
+    while (t--)
     {
-        cout << "4"
-             << " " << n - 4;
-    }
-    else
-    {
-        cout << "9"
-             << " " << n - 9;
+        string s;
+        cin >> s;
+
+        int sum = s[0] + s[1] + s[2];
+        int sum2 = s[3] + s[4] + s[5];
+        if (sum == sum2)
+        {
+            cout << "YES" << endl;
+        }
+        else
+        {
+            cout << "NO" << endl;
+        }
     }
     return 0;
 }
