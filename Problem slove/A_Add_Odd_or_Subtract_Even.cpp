@@ -53,25 +53,26 @@ int32_t main()
     cin >> t;
     while (t--)
     {
-        int n;
-        cin >> n;
-        vector<int> cnt(100);
-        f0(i, n)
+        int a, b;
+        cin >> a >> b;
+        if (a == b)
+            cout << "0" << endl;
+        else if (a > b)
         {
-            int x;
-            cin >> x;
-            cnt[x]++;
+            if ((a % 2 == 0 && b % 2 == 0) || (a % 2 == 1 && b % 2 == 1))
+                cout << "1" << endl;
+            else
+                cout << "2" << endl;
         }
-        bool ok = 1;
-        for (int i = 1; i < 100; ++i)
-            if (cnt[i] > cnt[i - 1])
-                ok = 0;
-        if (ok)
-            cout << "YES";
         else
-            cout << "NO";
-
-        cout << endl;
+        {
+            if ((a % 2 == 0 && b % 2 == 0) || (a % 2 == 1 && b % 2 == 1))
+                cout << "2" << endl;
+            else
+                cout << "1" << endl;
+        }
     }
     return 0;
 }
+/*---------- Who Am I ? -----------*/
+/*----- No System Is Safe -------*/

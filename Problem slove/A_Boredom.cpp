@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define int long long
+// #define int long long
 #define pi (3.141592653589)
 #define mod 1000000007
-#define int long long
+// #define int long long
 #define float double
 #define pb push_back
 #define mp make_pair
@@ -45,33 +45,41 @@ using namespace std;
     }
     return 1;
 }*/
-
+/*int slove(const int i)
+{
+    if (i == 0)
+    {
+        return 0;
+    }
+    if (i == 1)
+    {
+        return dp[i];
+    }
+    return max(slove(i - 1), slove(i - 2) + i * dp[i]);
+}*/
+long long int dp[1000005] = {0};
+long long int dp2[1000005];
 /* Main */
 int32_t main()
 {
-    fast int t = 1;
-    cin >> t;
-    while (t--)
-    {
-        int n;
-        cin >> n;
-        vector<int> cnt(100);
-        f0(i, n)
-        {
-            int x;
-            cin >> x;
-            cnt[x]++;
-        }
-        bool ok = 1;
-        for (int i = 1; i < 100; ++i)
-            if (cnt[i] > cnt[i - 1])
-                ok = 0;
-        if (ok)
-            cout << "YES";
-        else
-            cout << "NO";
+    fast
 
-        cout << endl;
+        long long n,
+        b;
+    cin >> n;
+    long long m = 0;
+    for (int i = 0; i < n; i++)
+    {
+        int x;
+        cin >> x;
+        dp[x]++;
     }
+    dp2[0] = 0;
+    dp2[1] = dp[1];
+    for (int i = 2; i <= 100000; i++)
+    {
+        dp2[i] = max(dp2[i - 1], dp2[i - 2] + i * dp[i]);
+    }
+    cout << dp2[100000];
     return 0;
 }

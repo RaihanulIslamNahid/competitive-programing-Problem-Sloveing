@@ -51,27 +51,28 @@ int32_t main()
 {
     fast int t = 1;
     cin >> t;
+
     while (t--)
     {
         int n;
         cin >> n;
-        vector<int> cnt(100);
-        f0(i, n)
+        int arr[n];
+        for (int i = 0; i < n; i++)
         {
-            int x;
-            cin >> x;
-            cnt[x]++;
+            cin >> arr[i];
         }
-        bool ok = 1;
-        for (int i = 1; i < 100; ++i)
-            if (cnt[i] > cnt[i - 1])
-                ok = 0;
-        if (ok)
-            cout << "YES";
-        else
-            cout << "NO";
-
-        cout << endl;
+        sort(arr, arr + n);
+        int ans = 0;
+        for (int i = 0; i < n - 1; i++)
+        {
+            ans += arr[i + 1] - arr[i];
+            // arr[i+1]==4;
+            // arr[i]=3
+        }
+        cout << ans << endl;
     }
+
     return 0;
 }
+/*---------- Who Am I ? -----------*/
+/*----- No System Is Safe -------*/

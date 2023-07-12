@@ -55,23 +55,38 @@ int32_t main()
     {
         int n;
         cin >> n;
-        vector<int> cnt(100);
-        f0(i, n)
+        int sum = 0, even = 0, odd = 0;
+        for (int i = 0; i < n; i++)
         {
             int x;
             cin >> x;
-            cnt[x]++;
+            sum += x;
+            if (x % 2)
+            {
+                odd++;
+            }
+            else
+            {
+                even++;
+            }
         }
-        bool ok = 1;
-        for (int i = 1; i < 100; ++i)
-            if (cnt[i] > cnt[i - 1])
-                ok = 0;
-        if (ok)
-            cout << "YES";
+        if (sum % 2 != 0)
+        {
+            cout << "YES" << endl;
+        }
         else
-            cout << "NO";
-
-        cout << endl;
+        {
+            if (odd >= 1 && even >= 1)
+            {
+                cout << "YES" << endl;
+            }
+            else
+            {
+                cout << "NO" << endl;
+            }
+        }
     }
     return 0;
 }
+/*---------- Who Am I ? -----------*/
+/*----- No System Is Safe -------*/

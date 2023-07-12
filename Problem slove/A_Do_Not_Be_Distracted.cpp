@@ -55,23 +55,28 @@ int32_t main()
     {
         int n;
         cin >> n;
-        vector<int> cnt(100);
-        f0(i, n)
+        string s;
+        cin >> s;
+        vector<bool> used(26, false);
+        used[s[0] - 'A'] = true;
+        bool ok = true;
+        for (int j = 1; j < n; j++)
         {
-            int x;
-            cin >> x;
-            cnt[x]++;
+            if (s[j] != s[j - 1] && used[s[j] - 'A'])
+            {
+                ok = false;
+            }
+            used[s[j] - 'A'] = true;
         }
-        bool ok = 1;
-        for (int i = 1; i < 100; ++i)
-            if (cnt[i] > cnt[i - 1])
-                ok = 0;
         if (ok)
-            cout << "YES";
+        {
+            cout << "YES" << endl;
+        }
         else
-            cout << "NO";
-
-        cout << endl;
+        {
+            cout << "NO" << endl;
+        }
     }
-    return 0;
 }
+/*---------- Who Am I ? -----------*/
+/*----- No System Is Safe -------*/

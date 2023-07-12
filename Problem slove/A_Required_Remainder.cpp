@@ -49,29 +49,19 @@ using namespace std;
 /* Main */
 int32_t main()
 {
-    fast int t = 1;
+    fast
+
+        long long t = 1;
     cin >> t;
     while (t--)
     {
-        int n;
-        cin >> n;
-        vector<int> cnt(100);
-        f0(i, n)
-        {
-            int x;
-            cin >> x;
-            cnt[x]++;
-        }
-        bool ok = 1;
-        for (int i = 1; i < 100; ++i)
-            if (cnt[i] > cnt[i - 1])
-                ok = 0;
-        if (ok)
-            cout << "YES";
-        else
-            cout << "NO";
-
-        cout << endl;
+        int x, y, n;
+        cin >> x >> y >> n;
+        long long p = (n - y) / x;
+        long long k = p * x + y;
+        cout << k << endl;
     }
     return 0;
 }
+/**---------- Who Am I ? -----------**/
+/**----- No System Is Safe -------**/
